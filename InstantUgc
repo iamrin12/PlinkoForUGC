@@ -1,0 +1,16 @@
+GameName = "Plinko For UGC"
+
+tab1name = "Main"
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local GameName = Library:NewWindow(GameName)
+
+local Tab1 = GameName:NewSection(tab1name)
+
+Tab1:CreateButton("Instant UGC", function(value)
+while wait() do
+   game:GetService("ReplicatedStorage").Remotes.ReachEnd:FireServer("UGC",1)
+end
+ end)
+local Tab2 = GameName:NewSection("Raizen")
